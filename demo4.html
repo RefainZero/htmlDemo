@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>认识标签4</title>
+</head>
+
+<body>
+<!--表单 输入框密码框，提交重置密码按钮 lable标签练习-->
+<form method="post" action="save.php">
+<label id="username"></label>
+用户名：
+<input type="text" name="username"  /><br />
+<label id="password"></label>
+密码：
+<input type="password" name="password" value="12345" /><br />
+<label id="submit"></label>
+<input type="submit" name="submit" value="提交" />
+<label id="reset"></label>
+<input type="reset" name="reset" value="重置" /><br />
+<hr />
+<!--单选框 复选框练习-->
+真 
+<input type="radio" name="istrue"  /><br />
+假
+<input type="radio" name="istrue"  /><br />
+篮球
+<input type="checkbox" name="sport"  /><br />
+足球
+<input type="checkbox" name="sport"  /><br />
+<hr />
+<!--下拉框支持多选-->
+<select multiple="multiple" id="mystyle" name="myseclet">
+	<option value="a">1</option>
+    <option value="b">2</option>
+    <option value="c">3</option>
+    <option value="d">4</option>
+</select><br />
+<!--下拉框单选，默认选中-->
+<select id="mystyle" name="myseclet">
+	<option value="a">1</option>
+    <option value="b">2</option>
+    <option selected="selected" value="c">tomboy</option>
+    <option value="d">4</option>
+</select>
+<hr />
+<!---文本域多行文本输入-->
+<label>个人简介：</label>
+<textarea  cols="50" rows="10"></textarea>
+</form>
+</body> 
+</html>

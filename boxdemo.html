@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>盒子练习之边框</title>
+    <style type="text/css">
+        h1{text-align: center}
+        p{
+            /*设置字体*/
+            font-family: 微软雅黑;
+            /*字体大小*/
+            font-size: 20px;
+            /*字体颜色*/
+            color: cadetblue;
+            /*首页缩颈*/
+            text-indent: 2em;
+            /*行高*/
+            line-height: 1em;
+            /*边框虚线*/
+            border: 2px dotted yellowgreen ;
+            /*内联块级元素*/
+            display: inline-block;
+        }
+        /*添加下边框*/
+        span{border-bottom: 1px solid blue;}
+        /*添加左边框*/
+        span{border-left: 2px dashed red;}
+        /*添加右边框*/
+        span{border-right: 4px dashed greenyellow;}
+        /*添加上边框*/
+        span{border-top: 6px dashed gold;}
+        /*盒子模型宽度和高度练习*/
+        li{
+            /*设置盒子宽和高度*/
+            width: 200px;height: 50px;
+            /*设置下边距*/
+            border-bottom: 2px solid orangered;
+        }
+        div{
+            width: 200px;height: 200px;
+            border: 2px solid palevioletred;
+            padding: 10px;
+        }
+        /*盒子模型填充练习*/
+        #box1{
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            /*流动模型练习左面浮动*/
+            float: left;
+        }
+        /*盒子模型边界练习右面浮动*/
+        #box2{
+            margin: 20px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<h1>习近平对政法工作作出重要指示：坚持党对政法工作的绝对领导</h1>
+<p>新华社北京1月22日消息，中共中央总书记、国家主席、中央军委主席习近平近日就政法工作作出重要指示，对党的十八大以来政法战线取得的成绩给予充分肯定，对新时代政法工作提出明确要求。</p>
+<p>习近平指出，党的十八大以来，政法战线认真贯彻党中央决策部署，坚持一手抓当前、一手谋长远，为维护改革发展稳定大局作出了重要贡献。</p>
+<span>党的十八大以来，政法战线认真贯彻党中央决策部署，坚持一手抓当前</span>
+<div align="center">
+    <ui>
+        <li>你所谓的稳定，不生命过是在浪费</li>
+        <li>优秀的人，从来不会输给情绪</li>
+        <li>简爱</li>
+    </ui>
+</div>
+<div id="box1">盒子1</div>
+<div id="box2">盒子2</div>
+</body>
+</html>

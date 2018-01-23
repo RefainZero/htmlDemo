@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    /*#test{border: 2px solid indianred}*/
+    /*包含选择器*/
+    p span{border: 2px solid red}
+    /*通用选择器*/
+    * {color:red;}
+    /*伪类选择器*/
+    a:hover{font-size: 20px}
+    /*加粗显示*/
+    a{font-weight: bold}
+    /*斜体显示*/
+    a{font-style: italic}
+    /*加下划线*/
+    a{text-decoration: underline}
+    /*删除线*/
+    a{text-decoration: line-through}
+    /*段落缩进2倍字体大小*/
+    p{text-indent: 2em}
+    /*1.5倍行间距*/
+    p{line-height: 1.5em}
+    /*设置单词间距*/
+    /*#hellow{word-spacing: 20px}*/
+    /*设置汉字及字母间距*/
+    /*#test{letter-spacing: 30px}*/
+    /*设置居中对齐*/
+    p{text-align: center}
+    /*设置左对齐*/
+    #test{text-align: left}
+    /*右对齐*/
+    #hellow{text-align:right}
+    /*加入块级元素，元素都从新的一行开始，并且其后的元素也另起一行*/
+    /*a{display: block}*/
+    div{
+        /*内部元素宽和高不可改变*/
+        display:inline;
+        /*display:inline-block;*/
+        width:20px;/*在默认情况下宽度不起作用*/
+        height:20px;/*在默认情况下高度不起作用*/
+        background:pink;/*设置背景颜色为粉色*/
+    }
+    /*盒子模型练习*/
+    #test{
+        /*设置边框样式*/
+        border-style: solid;
+        /*设置间距*/
+        border-width: 2px;
+        /*设置边框也暗色*/
+        border-color: #FF0000;
+    }
+</style>
+<body>
+
+    <p>自己一直学的都是 C++和 Java 以及 Python语言，根本不懂高大上的 CSS 和 著名的 HTML5.<br />感觉那些能<div>自己</div>设计<div>那么</div>漂亮<div>的博</div>客的朋<div>友都好厉害</div>。
+        <p id="hellow">hellow world!!</p>
+   <a href="https://hao.360.cn/?safe" target="_blank">可以自己加上</a> 博客公告栏的小宠物和微博以及加上背景音乐，都感觉好牛逼，好高大上，<span id="test">博客的亲切感立马就上来了</span>。</p>
+</body>
+</html>
