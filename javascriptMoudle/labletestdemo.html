@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>层级模型练习</title>
+    <style type="text/css">
+        div{
+            width: 200px;height: 100px;
+            border: 2px solid mediumvioletred;
+        }
+        #box1{
+            /*层级模型练习绝对定位*/
+            position: absolute;
+            right: 100px;
+            top: 50px;
+        }
+        #box2{
+            /*层级模型相对定位*/
+            position: relative;
+            top: 100px;
+            left:100px;
+        }
+        #box3{
+            /*层级模型固定定位*/
+            /*特点：不会随着页面滚动条分辨率大小改变*/
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        /*box4和box5Relative与Absolute组合使用*/
+        #box4{
+            position: relative;
+            width:200px;
+            height:200px;
+            margin: 200px auto;
+        }
+        #box5{
+            position: absolute;
+            font-size: 15px;text-indent: 2em;
+            width: 99%;
+            bottom: 0px;
+        }
+        p{
+            padding: 20px;
+            margin: 10px 20px;
+            /*rgb颜色设置*/
+            color: rgb(133,256,78);
+            font:italic  small-caps  bold  12px/1.5em  "宋体",sans-serif;
+            text-align: center;
+        }
+        #line{
+            margin: 50px auto;
+            height: 100px;
+            line-height: 100%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="box1">盒子1</div>
+<div id="box2">盒子2</div>
+<div id="box3">盒子3</div>
+<div id="box4">
+    <img src="http://img.mukewang.com/541a7d8a00018cf102000200.jpg">
+    <div id="box5">当我还是三年级的学生时是一个害羞的小女生。</div>
+    <p>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本。</p>
+</div>
+<div id="line">hi girl</div>
+</body>
+</html>

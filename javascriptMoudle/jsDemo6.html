@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>控制类名（className 属性）练习</title>
+    <style type="text/css">
+        .one{
+            float: left;
+            position: absolute;
+            width: 50%;
+            padding-top: 20px;
+            font-size: 20px;
+            font-family: 微软雅黑;
+            font-weight: bold;
+            background-color: aqua;
+        }
+        .two{
+            position: relative;
+            width: 70%;
+            height: 30%;
+            padding-top: 100px;
+            font-size: 50px;
+            font-family: 微软雅黑;
+            font-style: italic;
+            text-align: center;
+            text-decoration: underline;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+<p id="class" class="one"><img src="http://i.shangc.net/2017/1218/20171218113915209.jpeg"><a href="https://v.qq.com/x/cover/641dgjmod92qq07/j0025ehlgjj.html?ptag=360kan.tv.free" target="_blank"> 柒个我</a></p>
+<script type="application/javascript">
+    function update1(){
+    var mychar=document.getElementById("class");
+        mychar.className="two";
+    }
+    function update2(){
+        var mychar=document.getElementById("class");
+        mychar.className="one";
+    }
+</script>
+<input type="button" value="修改样式" onclick="update1()">
+<input type="button" value="重置" onclick="update2()">
+</body>
+</html>

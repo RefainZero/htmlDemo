@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>innerHTML 属性/改变元素属性及样式/隐藏和显示练习</title>
+</head>
+<body>
+<p id="con">this is a test !</p>
+<script type="text/javascript">
+    var mychar = document.getElementById("con");
+    //对象.style然后对属性修改
+    mychar.style.fontFamily = "微软雅黑";
+    mychar.style.fontSize = "20px";
+    mychar.style.backgroundColor = "blue";
+    mychar.style.display="block";
+    document.write("原来语句是：" + mychar.innerHTML);
+    mychar.innerHTML = "123456";
+    document.write("<br />" + "修改后：" + mychar.innerHTML);
+</script>
+<script type="text/javascript">
+    function ishide(){
+        var mystyle=confirm("是否隐藏？");
+        if(mystyle==true){
+            document.getElementById("con").style.display="none";
+        }else{
+            document.getElementById("con").style.display="block";
+        };
+    }
+</script>
+<input id="update" type="button" value="隐藏" onclick="ishide()">
+</body>
+</html>

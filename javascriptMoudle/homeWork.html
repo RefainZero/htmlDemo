@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!--任务
+一、定义"改变颜色"的函数
+提示:
+obj.style.color
+obj.style.backgroundColor
+二、定义"改变宽高"的函数
+提示:
+obj.style.width
+obj.style.height
+三、定义"隐藏内容"的函数
+提示:
+obj.style.display="none";
+四、定义"显示内容"的函数
+提示:
+obj.style.display="block";
+五、定义"取消设置"的函数
+提示:
+使用confirm()确定框，来确认是否取消设置。
+如是将以上所有的设置恢复原始值,否则不做操作。
+六、当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编程任务</title>
+    <style type="text/css">
+        body {
+            font-family: 微软雅黑;
+            font-size: 12px;
+        }
+
+        #txt {
+            height: 400px;
+            width: 600px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        p {
+            line-height: 18px;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+<h1 id="con">柒个我 </h1>
+
+<div id="txt">
+    <p id="p1">《柒个我》是由华策影视集团出品，张娜担任总制片人 ，邓科导演，张一山、蔡文静、张晓谦、范梦、张双利等人主演的中国首部以多重人格为题材的悬疑爱情偶像剧 。</p>
+
+    <p id="p2"> 该剧讲述了拥有七重人格的财阀三世沈亦臻和他的秘密女主治医生白欣欣的治愈系、搞笑、浪漫、爱情故事 。</p>
+
+    <p id="p3"> 该剧于2017年12月13日在腾讯视频播出。</p>
+</div>
+<form>
+    <!--改变颜色 -->
+    <input type="button" value="改变颜色" onclick="getcolor()">
+    <!--改变宽高-->
+    <input type="button" value="改变宽高" onclick="getwh()">
+    <!--隐藏内容-->
+    <input type="button" value="隐藏内容" onclick="hide()">
+    <!--显示内容-->
+    <input type="button" value="显示内容" onclick="block()">
+    <!--取消设置-->
+    <input type="button" value="取消设置" onclick="isreset()">
+</form>
+<script type="application/javascript">
+    //改变颜色
+    function getcolor() {
+        var color = document.getElementById("txt");
+        color.style.color = "red";
+        color.backgroundColor = "aqua";
+    }
+    //改变宽高
+    function getwh() {
+        var oj = document.getElementById("txt");
+        oj.style.width = "600px";
+        oj.style.height = "800px";
+    }
+    //隐藏内容
+    function hide() {
+        document.getElementById("txt").style.display = "none";
+    }
+    //显示内容
+    function block() {
+        document.getElementById("txt").style.display = "block";
+    }
+    //取消设置
+    function isreset(){
+        var mystyle=confirm("是否取消设置？");
+        if(mystyle==true){
+            document.getElementById("txt").removeAttribute("style")
+        }
+    }
+</script>
+</body>
+</html>
