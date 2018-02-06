@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组练习</title>
+</head>
+<body>
+<script type="text/javascript">
+    //  定义数组并赋值
+    var array=new Array(8);
+    array[0]="hellow,world!";
+    document.write("第一个下标是"+array[0]);
+</script>
+<script type="text/javascript">
+    // 二维数组练习
+    var array=new Array();//定义一维数组
+    for(var i=0;i<3;i++){//一位长度是3
+        // 先创建一维数组
+        array[i]=new Array();//在声明二维
+        for(var j=0;i<6;j++){//二维长度是6
+            var array[i][j]=i*j;赋值每个元素的值i*j
+        }
+    }
+</script>
+<script type="text/javascript">
+    /**
+     * 使用Javascript语言，把以下数组
+
+     var  arr = ['*','##',"***","&&","****","##*"];
+
+     arr[7] = "**";
+
+     在页面显示如下图所示的图案：
+
+     *
+
+     **
+
+     ***
+
+     ****
+     */
+    var  arr = ['*','##',"***","&&","****","##*"];
+    for(var i=0;i<arr.length;i++){
+        document.write(arr[i]+"<br />");
+    }
+    document.write("<------------------------------------------------------------------------------------------------><br />");
+    arr[7] = "**";
+    document.write(arr[0]+"<br />");
+    document.write(arr[7]+"<br />");
+    document.write(arr[2]+"<br />");
+    document.write(arr[4]+"<br />");
+    //    arr[7] = "**";
+</script>
+</body>
+</html>
