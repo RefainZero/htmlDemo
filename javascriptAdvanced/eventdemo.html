@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>事件练习</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 鼠标经过事件
+    function con(){
+        var msg=confirm("确定移开输入框？");
+        if(msg!=null){
+            document.write('确定');
+        }else{
+            document.write('不确定');
+        }
+    }
+    function message(msg){
+        document.write(msg);
+    }
+
+</script>
+<input type="button" value="hover" onmouseover="con()">
+<form onload="message('载入。。')" >
+    <!-- 鼠标已出事件-->
+    用户名：<input type="text" onmouseout="con()">
+    <!-- 光标聚焦事件-->
+    密码：<input type="password" value="123456" onfocus="message('光标聚焦事件！')">
+    <!-- 失焦事件-->
+    <input type="button" value="登录" onblur="message('失焦事件！')" >
+</form>
+个人简介
+<textarea rows="5" cols="60" onselect="message('内容选中事件')">请写入个人简介，不少于200字！</textarea>
+<!--改变内容事件-->
+<input type="text" value="登录" onchange="message('改变内容')" >
+</body>
+</html>
