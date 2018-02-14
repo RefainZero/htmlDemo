@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>日期延后练习</title>
+    <title>日期延后练习/字符操作练习</title>
 </head>
 <body>
 <script type="text/javascript">
@@ -13,6 +13,9 @@
     //延后的日期为：
     document.write("更新后日期时间："+mydate+"<br>");
     var mychar="i love you baby!";
+    /**
+     * 字符操作练习
+     */
     document.write("o第二次出现："+mychar.indexOf('o',7)+"<br>");
     mychar=mychar.toLocaleUpperCase();
     document.write("转换为大写："+mychar+"<br>");
@@ -29,8 +32,15 @@
     //从指定位置截取指定长度
     document.write(mystr.substr(3,12)+"<br>");
     document.write(mystr.substring(3)+"<br>");
-    //向上取值math.ceil
+    //向上取整math.ceil
     document.write(Math.ceil(2.8)+"<br>");
+    //向下取整math.floor
+    document.write(Math.floor(2.8)+"<br>");
+    //四舍五入
+    document.write(Math.round(8.8)+"<br>");
+    //随机数 parseInt转换为整数
+    document.write(parseInt((Math.random())*10));
+
 </script>
 </body>
 </html>
