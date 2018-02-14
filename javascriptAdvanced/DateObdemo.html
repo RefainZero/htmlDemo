@@ -7,13 +7,19 @@
 <body>
 <script type="text/javascript">
     var mydate=new Date();
-//  获取当前时间
+    //  获取当前时间
     document.write(mydate)+"<br/>";
-//  获取年份
+    //  获取年份
     document.write(mydate.getFullYear()+"<br/>");
-//  设置年份
+    //  设置年份
     mydate.setFullYear(1968);
     document.write(mydate+"<br/>");
+    //输出今天是星期几
+    var weekday=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];//定义日期数组
+    var mynum=mydate.getDay();//返回0-6
+    document.write(mynum+"<br/>");
+    //输出今天是星期几
+    document.write('今天是：'+weekday[mynum]+"<br/>");
 </script>
 </body>
 </html>

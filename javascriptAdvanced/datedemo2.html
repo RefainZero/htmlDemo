@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>日期延后练习</title>
+</head>
+<body>
+<script type="text/javascript">
+    var mydate=new Date;
+    document.write("当前日期时间："+mydate+"<br>");
+    //日期延后八小时
+    mydate.setTime(mydate.getTime()+8*60*60*1000);
+    //延后的日期为：
+    document.write("更新后日期时间："+mydate+"<br>");
+    var mychar="i love you baby!";
+    document.write("o第二次出现："+mychar.indexOf('o',7)+"<br>");
+    mychar=mychar.toLocaleUpperCase();
+    document.write("转换为大写："+mychar+"<br>");
+    document.write("转换为小写："+mychar.toLocaleLowerCase()+"<br>");
+    document.write("输出第3位字符："+mychar.charAt(2)+"<br>");
+    //字符分割
+    var mystr="86-010-85468578";
+    document.write(mystr.split('-')+"<br>");
+    document.write(mystr.split('')+"<br>");
+    document.write(mystr.split('',10)+"<br>");
+    //字符截取
+    document.write(mystr.substring(7)+"<br>");
+    document.write(mystr.substring(0,2)+"<br>");
+    //从指定位置截取指定长度
+    document.write(mystr.substr(3,12)+"<br>");
+    document.write(mystr.substring(3)+"<br>");
+    //向上取值math.ceil
+    document.write(Math.ceil(2.8)+"<br>");
+</script>
+</body>
+</html>
