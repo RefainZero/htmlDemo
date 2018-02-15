@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阶段7任务练习</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    //通过javascript的日期对象来得到当前的日期，并输出。
+    var mydate=new Date();
+    //输出今天是星期几
+    var weekday=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];//定义日期数组
+    var mynum=mydate.getDay();//返回0-6
+    //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+    var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    var score=scoreStr.split(";");
+    var sum=0;
+    var average=0;
+    for(var i=0;i<score.length;i++){
+        sum+=parseInt(score[i].substr(3,2));
+    }
+    average=Math.round(sum/score.length);
+    //从数组中将成绩撮出来，然后求和取整，并输出。
+    document.write(mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+weekday[mynum]+"<br/>班级总分为:"+sum+"<br/>平均分为:"+average+"<br/>");
+</script>
+</body>
+</html>

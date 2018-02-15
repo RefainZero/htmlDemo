@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组排序练习</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * 该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+       若返回值<=-1，则表示 A 在排序后的序列中出现在 B 之前。
+       若返回值>-1 && <1，则表示 A 和 B 具有相同的排序顺序。
+       若返回值>=1，则表示 A 在排序后的序列中出现在 B 之后。
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function compare(a,b){
+        return b-a;
+    }
+    var array1=["Hello","John","love","JavaScript"];
+    var array2=["80","16","50","6","100","1"];
+    document.write(array1.sort()+"<br>");
+    document.write(array2.sort(compare)+"<br>");
+</script>
+</body>
+</html>

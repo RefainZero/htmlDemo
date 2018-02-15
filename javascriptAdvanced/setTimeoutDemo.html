@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>setTimeout练习</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * setTimeout计时器
+     * 取消计时器 clearTimeout
+     * @type {number}
+     */
+    var num=0;
+    var i;
+    function start(){
+        document.getElementById('demo').value=num;
+        num++;
+        i=setTimeout("start()",100);
+    }
+    function stop(){
+        clearTimeout(i);
+    }
+</script>
+<input type="text" id="demo">
+<input type="button" value="start" onclick="start()">
+<input type="button" value="stop" onclick="stop()">
+</body>
+</html>
+

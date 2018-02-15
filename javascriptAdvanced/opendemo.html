@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阶段练习8</title>
+    <!--编程练习
+        制作一个跳转提示页面：
+        要求：
+        1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。
+        2. 如果点击“返回”按钮则返回前一个页面。
+        效果:
+        注意: 在窗口中运行该程序时，该窗口一定要有历史浏览记录，否则"返回"无效果。
+    -->
+    <style type="text/css">
+        #p1{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p id="p1">操作成功</p>
+<p><span id="p2">5</span>秒后返回主页&nbsp;<a href="javascript:goback();">返回</a></p>
+<script type="text/javascript">
+    var num = 5;
+    function mycount() {
+        num = num - 1;
+        setTimeout("mycount()", 1000);
+        document.getElementById('p2').innerHTML=num;
+        if (num == 0) {
+            window.location.assign("https://www.baidu.com/");
+        }
+    }
+    mycount();
+    function goback(){
+        window.history.back();
+    }
+</script>
+</body>
+</html>
