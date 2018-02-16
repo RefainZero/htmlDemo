@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>节点属性</title>
+</head>
+<body>
+<ul>
+    <li>javascript</li>
+    <li>HTML/CSS</li>
+    <li>jQuery</li>
+</ul>
+<script type="text/javascript">
+    var j=document.getElementsByTagName('li');
+    for(var i=0;i< j.length;i++){
+        document.write(j[i].nodeName+"<br/>");
+        document.write(j[i].nodeValue+"<br/>");
+        document.write(j[i].nodeType+"<br/>");
+    }
+    var row=document.getElementsByTagName('ul')[0].childNodes;
+    document.write("url子节点数："+row.length+"<br/>");
+    document.write("节点名称："+row[0].nodeName+"<br/>");
+    document.write("节点属性值："+row[0].nodeValue+"<br/>");
+    document.write("节点类型："+row[0].nodeType+"<br/>");
+</script>
+</body>
+</html>

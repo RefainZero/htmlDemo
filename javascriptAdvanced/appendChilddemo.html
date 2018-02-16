@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>appendChild</title>
+</head>
+<body>
+<body>
+
+<ul id="test">
+    <li>JavaScript</li>
+    <li id="li">test</li>
+    <li>HTML</li>
+</ul>
+
+<script type="text/javascript">
+    /**
+     * 添加节点，创建节点元素，节点元素替换，移除
+     * @type {Element}
+     */
+    var otest = document.getElementById("test");
+    var linode = document.getElementById("li");
+    var newnode1=document.createElement('li');
+    var newnode2=document.createElement('li');
+    otest.appendChild(newnode1);
+    otest.insertBefore(newnode2,linode);
+    newnode1.innerHTML="appendChild1";
+    newnode2.innerHTML="appendChild2";
+    otest.removeChild(newnode2);
+</script>
+</body>
+</html>

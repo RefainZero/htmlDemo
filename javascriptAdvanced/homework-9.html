@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阶段练习9</title>
+    <!--编程练习
+        制作一个表格，显示班级的学生信息。
+        要求：
+        1. 鼠标移到不同行上时背景色改为色值为 #f2f2f2，移开鼠标时则恢复为原背景色 #fff
+        2. 点击添加按钮，能动态在最后添加一行
+        3. 点击删除按钮，则删除当前行-->
+    <style type="text/css">
+        body{
+            font-family: 微软雅黑;
+            font-size: 15px;
+        }
+        table{
+            text-align: center;
+            width: 800px;
+            border: 2px solid black;
+        }
+        caption{
+            background-color: darkgray;
+            border: 1px solid black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        th, tr, td{
+            border: 1px solid black;
+        }
+        tr{
+            background-color: #fff ;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function on_mousemove(){
+            var tr=document.getElementsByTagName('tr');
+            for(var i=0;i<tr.length;i++){
+
+            }
+        }
+        function on_mouseout(){
+            var tr=document.getElementsByTagName('tr');
+            if(tr.childNodes.length==4){
+                tr.removeAttribute('style');
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <table summary="学生信息表">
+        <caption>学生信息表</caption>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <tr onmouseover="on_mousemove()" onmouseout="on_mouseout()">
+            <td>1</td>
+            <td>rock</td>
+            <td>男</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>refain</td>
+            <td>男</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>虾皮丸子</td>
+            <td>女
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>小猪佩奇</td>
+            <td>男</td>
+            <td>15</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

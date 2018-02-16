@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>创建文本节点createTextNode</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * 创建一个P标签，设置className属性，使用createTextNode创建文本节点"I love JavaScript!"。
+     */
+    var body=document.body;//获取body节点
+    var p=document.createElement('p');
+    p.className='text';
+    var node=document.createTextNode('I love JavaScript!');
+    p.appendChild(node);
+    body.appendChild(p);
+    // 浏览器可视区域大小
+    document.write(document.body.clientWidth+"&nbsp;"+document.body.clientHeight);
+    //网页尺寸大小
+    document.write(document.body.scrollHeight+"&nbsp;"+document.body.scrollWidth);
+    //网页尺寸大小
+    document.write(document.body.offsetHeight+"&nbsp;"+document.body.offsetWidth);
+</script>
+</body>
+</html>
