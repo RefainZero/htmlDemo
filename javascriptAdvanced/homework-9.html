@@ -10,78 +10,127 @@
         2. 点击添加按钮，能动态在最后添加一行
         3. 点击删除按钮，则删除当前行-->
     <style type="text/css">
-        body{
+        body {
             font-family: 微软雅黑;
             font-size: 15px;
         }
-        table{
+
+        table {
             text-align: center;
             width: 800px;
             border: 2px solid black;
         }
-        caption{
+
+        caption {
             background-color: darkgray;
             border: 1px solid black;
             font-weight: bold;
             font-size: 20px;
         }
-        th, tr, td{
+
+        th, tr, td {
             border: 1px solid black;
         }
-        tr{
-            background-color: #fff ;
+
+        tr {
+            background-color: #fff;
         }
 
     </style>
     <script type="text/javascript">
-        function on_mousemove(){
+        /**
+         * 鼠标移到不同行上时背景色改为色值为 #f2f2f2，移开鼠标时则恢复为原背景色 #fff
+         */
+        window.onload = function mouse() {
+            var tr = document.getElementsByTagName('tr');
+            for (var i = 0; i < tr.length; i++) {
+                changcolor(tr[i]);
+            }
+        }
+        function changcolor(obj) {
+            obj.onmousemove = function () {
+                obj.style.backgroundColor = '#f2f2f2';
+            }
+            obj.onmouseout = function () {
+                obj.style.backgroundColor = '#fff';
+            }
+        }
+        var num = 2;
+        function add() {
+            num++;
+            //创建一行
+            var tr = document.createElement('tr');
+            //创建单元格
+            var id = document.createElement('td');
+            //为单元格赋值
+            id.innerHTML="xsh000"+num;
+            //创建单元格
+            var name = document.createElement('td');
+            //为单元格赋值
+            name.innerHTML="第"+num+"个学生";
+            //创建单元格
+            var sex = document.createElement('td');
+            //为单元格赋值
+            sex.innerHTML="男";
+            //创建单元格
+            var age = document.createElement('td');
+            //为单元格赋值
+            age.innerHTML=12+num;
+            //创建单元格
+            var del = document.createElement('td');
+            //为单元格赋值
+            del.innerHTML="<a href='javascript:' onclick='deleteInfo(this);'>"+"删除</a>";
+            var tb=document.getElementById('table');
+            //添加子节点
+            tb.appendChild(tr);
+            //添加子节点
+            tr.appendChild(id);
+            //添加子节点
+            tr.appendChild(name);
+            //添加子节点
+            tr.appendChild(sex);
+            //添加子节点
+            tr.appendChild(age);
+            //添加子节点
+            tr.appendChild(del);
             var tr=document.getElementsByTagName('tr');
             for(var i=0;i<tr.length;i++){
-
+                //改变行颜色
+                changcolor(tr[i]);
             }
         }
-        function on_mouseout(){
-            var tr=document.getElementsByTagName('tr');
-            if(tr.childNodes.length==4){
-                tr.removeAttribute('style');
-            }
+        //删除，但是第一行却无法删除，不知道为什么
+        function deleteInfo(obj){
+            var del=obj.parentNode.parentNode;
+            del.parentNode.removeChild(del);
         }
-
     </script>
 </head>
 <body>
 <div>
-    <table summary="学生信息表">
+    <table id='table' summary="学生信息表">
         <caption>学生信息表</caption>
         <th>序号</th>
         <th>姓名</th>
         <th>性别</th>
         <th>年龄</th>
-        <tr onmouseover="on_mousemove()" onmouseout="on_mouseout()">
-            <td>1</td>
+        <th>操作</th>
+        <tr>
+            <td>xsh0001</td>
             <td>rock</td>
             <td>男</td>
             <td>21</td>
+            <td><a href="javascript:deleteInfo(this);">删除</a></td>
         </tr>
         <tr>
-            <td>2</td>
+            <td>xsh0002</td>
             <td>refain</td>
             <td>男</td>
             <td>20</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>虾皮丸子</td>
-            <td>女
-            <td>18</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>小猪佩奇</td>
-            <td>男</td>
-            <td>15</td>
+            <td><a href="javascript:;" onclick="deleteInfo(this)">删除</a></td>
         </tr>
     </table>
+    <input type="button" value="添加一行" onclick="add()">
 </div>
 </body>
 </html>
