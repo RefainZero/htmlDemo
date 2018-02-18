@@ -99,7 +99,7 @@
                 changcolor(tr[i]);
             }
         }
-        //删除，但是第一行却无法删除，不知道为什么
+        //删除方法
         function deleteInfo(obj){
             var del=obj.parentNode.parentNode;
             del.parentNode.removeChild(del);
@@ -120,7 +120,7 @@
             <td>rock</td>
             <td>男</td>
             <td>21</td>
-            <td><a href="javascript:deleteInfo(this);">删除</a></td>
+            <td><a href="javascript:;" onclick="deleteInfo(this)">删除</a></td>
         </tr>
         <tr>
             <td>xsh0002</td>
